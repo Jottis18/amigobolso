@@ -5,8 +5,15 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'AmigoBolso - Seu Assessor Financeiro Pessoal',
-  description: 'Tenha um assessor pessoal trabalhando 24 horas por dia para você. Gestão financeira simplificada pelo WhatsApp.',
+  title: 'AmigoBolso',
+  description: 'Seu assessor financeiro pessoal trabalhando 24 horas por dia. Gestão financeira simplificada pelo WhatsApp.',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({
