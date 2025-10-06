@@ -156,7 +156,7 @@ a {
   left: -8px;
   top: 150px;
   width: 6px;
-  height: 40px;
+  height: 30px; /* Reduzido de 40px para 30px */
   background: #2a2a2a;
   border-radius: 3px;
   z-index: 5;
@@ -166,9 +166,9 @@ a {
   content: '';
   position: absolute;
   left: -8px;
-  top: 200px;
+  top: 195px; /* Ajustado de 200px para 195px para criar mais espaço */
   width: 6px;
-  height: 40px;
+  height: 30px; /* Reduzido de 40px para 30px */
   background: #2a2a2a;
   border-radius: 3px;
   z-index: 5;
@@ -246,6 +246,19 @@ a {
     margin-bottom: 20px;
   }
   
+  /* Reordenar planos para mobile - 6 meses primeiro */
+  .mobile-first {
+    order: 1;
+  }
+  
+  .mobile-middle {
+    order: 2;
+  }
+  
+  .mobile-last {
+    order: 3;
+  }
+  
   .whatsapp-mockup {
     padding: 15px;
   }
@@ -257,6 +270,29 @@ a {
   .iphone-frame {
     width: 250px;
     height: 500px;
+  }
+  
+  /* Ajustar posicionamento dos botões do iPhone para mobile */
+  .iphone-frame::before {
+    top: 120px; /* Ajustado de 150px para 120px */
+    height: 25px; /* Reduzido para mobile */
+  }
+  
+  .iphone-frame::after {
+    top: 155px; /* Ajustado de 160px para 155px para criar mais espaço */
+    height: 25px; /* Reduzido para mobile */
+  }
+  
+  .iphone-frame .power-button {
+    top: 80px; /* Ajustado de 100px para 80px */
+  }
+  
+  .iphone-frame .mute-button {
+    top: 140px; /* Ajustado de 180px para 140px */
+  }
+  
+  .iphone-frame .volume-up-button {
+    top: 78px; /* Ajustado de 98px para 78px */
   }
   
   /* Plan cards mobile responsiveness */
@@ -343,5 +379,36 @@ a {
   .plan-card .py-2 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+  }
+}
+
+/* Ajustes adicionais para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+  .iphone-frame {
+    width: 200px;
+    height: 400px;
+  }
+  
+  /* Ajustar ainda mais os botões para telas pequenas */
+  .iphone-frame::before {
+    top: 100px; /* Ajustado para telas muito pequenas */
+    height: 20px; /* Reduzido para telas muito pequenas */
+  }
+  
+  .iphone-frame::after {
+    top: 125px; /* Ajustado de 130px para 125px para criar mais espaço */
+    height: 20px; /* Reduzido para telas muito pequenas */
+  }
+  
+  .iphone-frame .power-button {
+    top: 65px; /* Ajustado para telas muito pequenas */
+  }
+  
+  .iphone-frame .mute-button {
+    top: 115px; /* Ajustado para telas muito pequenas */
+  }
+  
+  .iphone-frame .volume-up-button {
+    top: 63px; /* Ajustado para telas muito pequenas */
   }
 }

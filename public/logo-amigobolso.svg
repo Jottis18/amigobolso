@@ -1,0 +1,21 @@
+<svg width="200" height="80" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Carteira -->
+  <g transform="translate(100, 20)">
+    <!-- Corpo principal da carteira -->
+    <rect x="-25" y="-8" width="50" height="16" rx="8" ry="8" fill="#10b981" stroke="#10b981" stroke-width="2"/>
+    <!-- Botão/fecho da carteira -->
+    <circle cx="15" cy="0" r="3" fill="#10b981"/>
+    <!-- Detalhe da dobra -->
+    <path d="M-25 -8 Q-25 -12 -20 -12 Q-15 -12 -15 -8" stroke="#10b981" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Texto AmigoBolso -->
+  <text x="100" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#10b981">
+    AmigoBolso
+  </text>
+  
+  <!-- Slogan -->
+  <text x="100" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="normal" fill="#059669">
+    Seu atalho financeiro inteligente
+  </text>
+</svg>

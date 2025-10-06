@@ -11,12 +11,11 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-amigo-green to-amigo-green-dark rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">A</span>
-              </div>
-              <span className="text-2xl font-bold text-gray-900">AmigoBolso</span>
-            </div>
+            <img 
+              src="/logo-amigobolso.svg" 
+              alt="AmigoBolso - Seu atalho financeiro inteligente" 
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}

@@ -6,6 +6,7 @@ export default function PlansSection() {
       subtitle: "Perfeito para experimentar",
       price: "R$ 19,90",
       period: "/mês",
+      paymentLink: "https://pay.cakto.com.br/xxfdh4u_538527",
       features: [
         "Envio de comprovantes PIX",
         "IA com 99,9% de precisão",
@@ -23,6 +24,7 @@ export default function PlansSection() {
       subtitle: "Oferta mais vantajosa",
       price: "R$ 59,90",
       period: "/6 meses",
+      paymentLink: "https://pay.cakto.com.br/3ddecoo_538532",
       originalPrice: "R$ 119,40",
       savings: "Economize R$ 60.00",
       monthlyPrice: "Apenas R$ 9,98/mês",
@@ -44,6 +46,7 @@ export default function PlansSection() {
       subtitle: "Custo-benefício intermediário",
       price: "R$ 39,90",
       period: "/3 meses",
+      paymentLink: "https://pay.cakto.com.br/igmave2_538531",
       originalPrice: "R$ 59,70",
       savings: "Economize R$ 20.00",
       features: [
@@ -75,7 +78,11 @@ export default function PlansSection() {
           {plans.map((plan) => (
             <div
               key={plan.id}
-              className={`plan-card ${plan.popular ? 'featured' : ''} relative`}
+              className={`plan-card ${plan.popular ? 'featured' : ''} relative ${
+                plan.id === 3 ? 'md:order-2 mobile-first' : 
+                plan.id === 1 ? 'md:order-1 mobile-last' : 
+                'md:order-3 mobile-middle'
+              }`}
             >
               {plan.badge && (
                 <div className="absolute -top-2 md:-top-3 left-1/2 transform -translate-x-1/2 z-20">
@@ -130,7 +137,9 @@ export default function PlansSection() {
 
               <div className="text-center">
                 <a
-                  href="#"
+                  href={plan.paymentLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`w-full py-3 md:py-4 px-4 md:px-6 rounded-full font-bold text-base md:text-lg transition-all duration-300 btn-hover text-center block ${
                     plan.popular
                       ? 'bg-gradient-to-r from-amigo-green to-amigo-green-dark text-white hover:shadow-xl'
